@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'maincss'%}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is the working page right now</h1>
+    
+    <form action="{%url 'result'%}">
+        <h2>Get your titanic prediction here!!!!!!!!!!!</h2>
+        <p>Enter the details of a made up person on the titanic voyage</p>
+        {% csrf_token %}
+        <p>PassengerId</p>
+        <input type="text" name='PassengerId'>
+        <p>Pclass</p>
+        <input type="text" name='Pclass'>
+        <p>Sex</p>
+        <input type="text" name='Sex'>
+        <p>Age</p>
+        <input type="text" name='Age'>
+        <p>Parch</p>
+        <input type="text" name='Parch'>
+        <p>Fare</p>
+        <input type="text" name='Fare'>
+        <p>Embarked</p>
+        <input type="text" name='Embarked'>
+        <input type="submit">
+    </form>
+
+</body>
+</html>
